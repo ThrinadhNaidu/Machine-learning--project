@@ -1,0 +1,24 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reports & Export · DemandIQ</title><link rel="stylesheet" href="css/style.css"></head>
+<body data-page="reports"><div class="app"><aside class="sidebar">
+<div class="brand"><div class="logo">D</div><div><strong>DemandIQ</strong><span>Demand forecasting studio</span></div></div>
+<div class="nav-title">Workspace</div><nav class="nav">
+<a href="index.html">◈ <span>Dashboard</span></a>
+<a href="dataset.html">▦ <span>Dataset Explorer</span></a>
+<a href="analytics.html">◌ <span>Analytics</span></a>
+<a href="models.html">⌁ <span>ML Models</span></a>
+<a href="prediction.html">✦ <span>Demand Prediction</span></a>
+</nav>
+<div class="nav-title">Output</div><nav class="nav">
+<a href="reports.html">▤ <span>Reports & Export</span></a>
+<a href="settings.html">⚙ <span>Settings</span></a>
+</nav>
+<div class="side-foot">Product Demand Forecasting<br>Ridge + Lasso Regression<br>Academic ML Project</div>
+</aside><main class="main"><div class="topbar"><div><button id="mobileMenu" class="btn mobile-menu">☰</button><span class="crumb">DemandIQ / Reports & Export</span></div><div class="actions"><label class="btn">Upload Excel<input class="excel-upload-input" type="file" accept=".xlsx,.xls" style="display:none"></label><button class="btn primary export-xlsx-btn">Export Excel</button></div></div><div class="section-head"><div><h1 style="margin:0">Reports & Export</h1><p>Create presentation-ready outputs from the current dataset.</p></div><span class="pill green">Export center</span></div>
+<div class="grid four"><div class="card kpi"><div class="label">RECORDS</div><div class="value" id="reportRecords">—</div><div class="sub">Current dataset</div></div><div class="card kpi"><div class="label">AVG DEMAND</div><div class="value" id="reportDemand">—</div><div class="sub">Units</div></div><div class="card kpi"><div class="label">RIDGE R²</div><div class="value" id="ridgeReportR2">—</div><div class="sub">Test set</div></div><div class="card kpi"><div class="label">LASSO R²</div><div class="value" id="lassoReportR2">—</div><div class="sub">Test set</div></div></div>
+<div class="grid three" style="margin-top:16px"><div class="card"><div class="eyebrow">01 · Dataset</div><h2>Excel / CSV</h2><p style="color:#8fa3bd;font-size:12px;line-height:1.6">Export the full loaded dataset or any imported replacement dataset.</p><button class="btn primary export-xlsx-btn">Download Excel</button> <button class="btn export-csv-btn">Download CSV</button></div>
+<div class="card"><div class="eyebrow">02 · Report</div><h2>PDF summary</h2><p style="color:#8fa3bd;font-size:12px;line-height:1.6">Generate a compact project summary containing dataset and model metrics.</p><button class="btn primary export-pdf-btn">Generate PDF</button></div>
+<div class="card"><div class="eyebrow">03 · Presentation</div><h2>Key talking points</h2><p style="color:#8fa3bd;font-size:12px;line-height:1.6">Use Dashboard → Analytics → ML Models → Prediction as your presentation flow.</p><a class="btn" href="index.html">Open dashboard</a></div></div>
+<div class="card" style="margin-top:16px"><h2>Suggested presentation flow</h2><div class="workflow"><div class="step"><strong>Problem</strong><span>Businesses need reliable demand estimates.</span></div><div class="step"><strong>Data</strong><span>504 records and 13 variables from the Excel dataset.</span></div><div class="step"><strong>Preparation</strong><span>Cleaning, encoding, scaling and train/test split.</span></div><div class="step"><strong>Models</strong><span>Ridge and Lasso regression with regularization.</span></div><div class="step"><strong>Result</strong><span>Compare MAE, RMSE and R² and demonstrate a forecast.</span></div></div></div><div class="footer">DemandIQ • Product Demand Forecasting • <span id="year"></span></div></main></div><div id="toast" class="toast"></div><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
+<script src="js/data.js"></script><script src="js/model-metrics.js"></script><script src="js/app.js"></script></body></html>

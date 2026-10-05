@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Demand Prediction · DemandIQ</title><link rel="stylesheet" href="css/style.css"></head>
+<body data-page="prediction"><div class="app"><aside class="sidebar">
+<div class="brand"><div class="logo">D</div><div><strong>DemandIQ</strong><span>Demand forecasting studio</span></div></div>
+<div class="nav-title">Workspace</div><nav class="nav">
+<a href="index.html">◈ <span>Dashboard</span></a>
+<a href="dataset.html">▦ <span>Dataset Explorer</span></a>
+<a href="analytics.html">◌ <span>Analytics</span></a>
+<a href="models.html">⌁ <span>ML Models</span></a>
+<a href="prediction.html">✦ <span>Demand Prediction</span></a>
+</nav>
+<div class="nav-title">Output</div><nav class="nav">
+<a href="reports.html">▤ <span>Reports & Export</span></a>
+<a href="settings.html">⚙ <span>Settings</span></a>
+</nav>
+<div class="side-foot">Product Demand Forecasting<br>Ridge + Lasso Regression<br>Academic ML Project</div>
+</aside><main class="main"><div class="topbar"><div><button id="mobileMenu" class="btn mobile-menu">☰</button><span class="crumb">DemandIQ / Demand Prediction</span></div><div class="actions"><label class="btn">Upload Excel<input class="excel-upload-input" type="file" accept=".xlsx,.xls" style="display:none"></label><button class="btn primary export-xlsx-btn">Export Excel</button></div></div><div class="section-head"><div><h1 style="margin:0">Demand Prediction</h1><p>Enter business conditions and generate a demand forecast.</p></div><span class="pill green">Ridge / Lasso API</span></div>
+<div class="grid two"><div class="card"><h2 style="margin-top:0">Prediction inputs</h2><form id="predictForm"><div class="form-grid">
+<div class="field"><label>Year</label><input name="Year" type="number" value="2025" required></div><div class="field"><label>Month</label><input name="Month" type="number" min="1" max="12" value="6" required></div>
+<div class="field"><label>Product</label><select name="Product"><option>Laptop</option><option>Headphones</option><option>Smartphone</option><option>Tablet</option><option>Smartwatch</option></select></div><div class="field"><label>Season</label><select name="Season"><option>Winter</option><option>Summer</option><option>Monsoon</option><option>Festival</option></select></div>
+<div class="field"><label>Price</label><input name="Price" type="number" value="35000" required></div><div class="field"><label>Discount %</label><input name="Discount_Percent" type="number" value="10" required></div>
+<div class="field"><label>Advertising Spend</label><input name="Advertising_Spend" type="number" value="35000" required></div><div class="field"><label>Previous Sales Units</label><input name="Previous_Sales_Units" type="number" value="350" required></div>
+<div class="field"><label>Holiday</label><select name="Holiday"><option value="0">No</option><option value="1">Yes</option></select></div><div class="field"><label>Competitor Price</label><input name="Competitor_Price" type="number" value="40000" required></div>
+<div class="field"><label>Stock Available</label><input name="Stock_Available" type="number" value="500" required></div><div class="field"><label>Promotion</label><select name="Promotion"><option value="0">No</option><option value="1">Yes</option></select></div>
+</div><div class="field" style="margin-top:14px"><label>Model</label><select id="modelSelect" name="model"><option value="ridge">Ridge Regression</option><option value="lasso">Lasso Regression</option></select></div><button class="btn primary" style="margin-top:16px;width:100%">Predict demand →</button></form></div>
+<div><div class="card"><div class="eyebrow">Forecast output</div><div id="predictionResult" class="result" style="display:none"></div></div><div class="card" style="margin-top:16px"><h3>Prediction pipeline</h3><div class="progress"><i style="width:100%"></i></div><p style="color:#8fa3bd;font-size:11px;line-height:1.7">Input → preprocessing → categorical encoding → numerical scaling → Ridge/Lasso model → predicted demand.</p></div></div></div><div class="footer">DemandIQ • Product Demand Forecasting • <span id="year"></span></div></main></div><div id="toast" class="toast"></div><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
+<script src="js/data.js"></script><script src="js/model-metrics.js"></script><script src="js/app.js"></script></body></html>
